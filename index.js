@@ -31,7 +31,7 @@ function newscroll() {
     var diff = heightscroll - topside;
     console.log(diff);
 
-    if (diff < 900) {
+    if (diff < 600) {
         debouncing();
     }
 }
