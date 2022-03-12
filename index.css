@@ -1,0 +1,11 @@
+#scrolls{
+    border: 8px solid rgb(199, 3, 3);
+    color:black;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 45%;
+    margin: auto;
+    text-align: center;
+    height: 80vh;
+    overflow-y: scroll;  
+}
