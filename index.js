@@ -19,7 +19,7 @@ function debouncing(){
        a=a+25;
        b=b+25;
        scrolling(a,b)
-    },5000)
+    },200)
 }
 
 function newscroll() {
