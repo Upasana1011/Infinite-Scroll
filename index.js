@@ -8,7 +8,7 @@ function scrolling(a,b) {
         h1.textContent=`Masai Student ${i}`;
         scroll_smallbox.append(h1);
     }
-    debouncing();
+   // debouncing();
 }
 scrolling(a,b);
 
@@ -22,12 +22,23 @@ function debouncing(){
     },5000)
 }
 
-let leftside=scrolls.scrollLeft;
-let topside=scrolls.scrollTop;
+function newscroll() {
+    //let leftside=scrolls.scrollLeft;
+    let topside = scrolls.scrollTop;
 
-let heightscroll=scrolls.scrollHeight;
+    let heightscroll = scrolls.scrollHeight;
+    console.log("top " + topside + "  height " + heightscroll);
+    var diff = heightscroll - topside;
+    console.log(diff);
 
-let text="clientHeight: "+ scrolls.clientHeight + "px<br/>";
-text+="clientWidth: "+ scrolls.clientWidth + "px<br/>"; 
-//document.getElementById("demo").innerHTML=text;
+    if (diff < 600) {
+        debouncing();
+    }
+}
+
+
+// let text="clientHeight: "+ scrolls.clientHeight + "px<br/>";
+// text+="clientWidth: "+ scrolls.clientWidth + "px<br/>";
+// document.getElementById("demo").innerHTML=text;
+
 
